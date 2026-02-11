@@ -7,7 +7,7 @@
 }
 
 :root {
-    --nav-height: clamp(60px, 8vh, 80px);
+    --nav-height: clamp(80px, 9vh, 100px);
     --container-padding: clamp(20px, 5vw, 60px);
 }
 
@@ -34,7 +34,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
 .navbar-content {
     max-width: 1600px;
     width: 100%;
@@ -59,7 +58,7 @@ body {
 .navbar-right {
     display: flex;
     align-items: center;
-    gap: clamp(20px, 3vw, 40px);
+    gap: clamp(24px, 4vw, 48px);
 }
 
 .navbar-links {
@@ -104,6 +103,8 @@ body {
     height: 18px;
     stroke-width: 1.5;
 }
+
+
 
 .hero {
     width: 100%;
