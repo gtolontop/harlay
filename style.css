@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 80px;
+    /* Taller navbar */
+    background-color: transparent;
+    /* Or #1a1a1a if sticky, but looks blended */
+    width: 100%;
+}
+
+/* Logo */
+.navbar-logo {
+    font-size: 20px;
+    font-weight: 300;
+    /* Thinner font */
+    letter-spacing: 0.5px;
+    /* Slight spacing, not too wide */
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+/* Right Side Container */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    /* Spacing between links and button */
+}
+
+/* Nav links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 32px;
+}
+
+.navbar-links a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a0a0a0;
+    /* Grey text */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: #ffffff;
+}
+
+/* Buy Now button */
+.navbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.navbar-btn:hover {
+    transform: scale(1.02);
+}
+
+.navbar-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 1.5;
+    /* Thinner icon strokes */
+}
