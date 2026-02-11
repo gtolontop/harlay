@@ -78,3 +78,13 @@ body {
     height: 18px;
     stroke-width: 1.5;
 }
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 100vh;
+    background-color: transparent;
+    width: 100%;
+}
