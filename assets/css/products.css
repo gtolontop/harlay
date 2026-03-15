@@ -1,11 +1,9 @@
-/* ============ BODY ============ */
 body {
     margin: 0;
     padding: 0;
     background: #1a1a1a;
 }
 
-/* ============ TITRE ============ */
 #titre {
     scroll-margin-top: var(--nav-height);
     font-size: 50px;
@@ -26,7 +24,6 @@ body {
     to { background-position: 200%; }
 }
 
-/* ============ PRODUITS ============ */
 .produits {
     max-width: 800px;
     margin: 0 auto;
@@ -75,7 +72,6 @@ body {
     margin: 0;
 }
 
-/* ============ BOUTONS +/- ============ */
 .produit-actions {
     display: flex;
     align-items: center;
@@ -129,7 +125,6 @@ body {
     color: rgba(255,255,255,0.7);
 }
 
-/* ============ FLÈCHES ============ */
 #flechebas {
     position: fixed;
     top: 50%;
@@ -150,7 +145,6 @@ body {
     z-index: 10;
 }
 
-/* ============ CHECKOUT ============ */
 .checkout {
     max-width: 800px;
     margin: 80px auto 40px;
@@ -213,7 +207,6 @@ body {
     color: #ffffff;
 }
 
-/* ============ SIGNATURE ============ */
 #sign {
     text-align: center;
     padding: 40px 20px;
@@ -222,7 +215,6 @@ body {
     color: rgba(255,255,255,0.15);
 }
 
-/* ============ RESPONSIVE ============ */
 @media (max-width: 600px) {
     .produit img {
         width: 100%;
