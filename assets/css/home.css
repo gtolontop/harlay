@@ -1,7 +1,3 @@
-/* ============================================
-   HARLEY B600 — HOME
-   ============================================ */
-
 :root {
     --white: #ffffff;
     --white-70: rgba(255, 255, 255, 0.7);
@@ -13,12 +9,13 @@
     --dark-card: #1f1f1f;
 }
 
-/* ============ REVEAL ANIMATION ============ */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
+    /* transition fluide : cubic-bezier = courbe d'accélération custom (démarre vite, finit doucement) */
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
                 transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    /* délai variable : chaque élément peut avoir son propre --delay défini en HTML */
     transition-delay: var(--delay, 0s);
 }
 
@@ -27,10 +24,10 @@
     transform: translateY(0);
 }
 
-/* ============ HERO ============ */
 .hero {
     position: relative;
     width: 100%;
+    /* hauteur = tout l'écran moins la navbar */
     height: calc(100vh - var(--nav-height));
     display: flex;
     align-items: center;
@@ -72,6 +69,7 @@
 }
 
 .hero-title {
+    /* clamp(min, préféré, max) : taille fluide selon la largeur de l'écran */
     font-size: clamp(80px, 15vw, 180px);
     font-weight: 900;
     color: var(--white);
@@ -88,7 +86,7 @@
 }
 
 .hero-sub {
-    font-size: clamp(16px, 1.4vw, 22px);
+    font-size: clamp(16px, 1.4vw, 22px); /* taille fluide entre 16px et 22px */
     font-weight: 300;
     color: var(--white-40);
     letter-spacing: 0.5px;
@@ -102,7 +100,6 @@
     margin-top: 16px;
 }
 
-/* ============ BUTTONS ============ */
 .cta-main {
     display: inline-flex;
     align-items: center;
@@ -117,6 +114,7 @@
     border-radius: 60px;
     text-decoration: none;
     cursor: pointer;
+    /* deux propriétés animées en même temps avec des courbes différentes */
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
                 opacity 0.25s ease;
 }
@@ -132,6 +130,7 @@
 }
 
 .cta-main:hover svg {
+    /* flèche qui glisse vers la droite au hover */
     transform: translateX(4px);
 }
 
@@ -160,11 +159,11 @@
     font-size: 17px;
 }
 
-/* ============ SCROLL INDICATOR ============ */
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
     left: 50%;
+    /* centré horizontalement */
     transform: translateX(-50%);
     z-index: 2;
 }
@@ -172,16 +171,17 @@
 .scroll-line {
     width: 1px;
     height: 60px;
+    /* dégradé du blanc vers transparent, de haut en bas */
     background: linear-gradient(to bottom, var(--white-40), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
 @keyframes scrollPulse {
+    /* la ligne pulse en opacité et en hauteur */
     0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
     50% { opacity: 1; transform: scaleY(1); }
 }
 
-/* ============ MARQUEE ============ */
 .marquee-section {
     padding: 32px 0;
     border-top: 1px solid var(--white-05);
@@ -192,6 +192,7 @@
 
 .marquee-track {
     display: flex;
+    /* largeur auto selon le contenu pour que le défilement fonctionne */
     width: max-content;
 }
 
@@ -200,7 +201,7 @@
     align-items: center;
     gap: 48px;
     padding-right: 48px;
-    flex-shrink: 0;
+    flex-shrink: 0; /* empêche le contenu de rétrécir */
     animation: marqueeScroll 15s linear infinite;
 }
 
@@ -210,7 +211,7 @@
     letter-spacing: 6px;
     text-transform: uppercase;
     color: var(--white-20);
-    white-space: nowrap;
+    white-space: nowrap; /* empêche le texte de passer à la ligne */
 }
 
 .marquee-dot {
@@ -224,10 +225,10 @@
 
 @keyframes marqueeScroll {
     0% { transform: translateX(0); }
+    /* décale d'exactement une répétition pour que ça boucle sans saut */
     100% { transform: translateX(calc(-100% - 48px)); }
 }
 
-/* ============ STORY ============ */
 .story {
     padding: 140px var(--container-padding);
 }
@@ -236,7 +237,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* deux colonnes égales */
     gap: 80px;
     align-items: center;
 }
@@ -282,12 +283,13 @@
 }
 
 .story-img-wrapper::after {
+    /* pseudo-élément pour ajouter une bordure par dessus l'image */
     content: '';
     position: absolute;
-    inset: 0;
+    inset: 0; /* équivalent à top/right/bottom/left: 0 */
     border-radius: 20px;
     border: 1px solid var(--white-10);
-    pointer-events: none;
+    pointer-events: none; /* invisible aux clics */
 }
 
 .story-img-wrapper img {
@@ -299,10 +301,9 @@
 }
 
 .story-img-wrapper:hover img {
-    transform: scale(1.03);
+    transform: scale(1.03); /* léger zoom au hover */
 }
 
-/* ============ SPECS ============ */
 .specs {
     padding: 80px var(--container-padding);
     border-top: 1px solid var(--white-05);
@@ -318,7 +319,7 @@
 }
 
 .spec-item {
-    flex: 1;
+    flex: 1; /* chaque item prend la même largeur */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,6 +333,7 @@
     font-weight: 800;
     color: var(--white);
     line-height: 1;
+    /* aligne les chiffres proprement même quand ils changent (compteur animé) */
     font-variant-numeric: tabular-nums;
 }
 
@@ -356,7 +358,6 @@
     background: var(--white-10);
 }
 
-/* ============ FEATURES ============ */
 .features {
     padding: 140px var(--container-padding);
 }
@@ -387,7 +388,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
     gap: 24px;
 }
 
@@ -403,13 +404,13 @@
 
 .feature-card:hover {
     border-color: var(--white-10);
-    transform: translateY(-4px);
+    transform: translateY(-4px); /* légère élévation au hover */
 }
 
 .card-number {
     font-size: 64px;
     font-weight: 900;
-    color: var(--white-05);
+    color: var(--white-05); /* quasi invisible, juste décoratif */
     line-height: 1;
     margin-bottom: 24px;
 }
@@ -434,16 +435,16 @@
     left: 0;
     width: 100%;
     height: 1px;
+    /* ligne qui va du blanc vers transparent, de gauche à droite */
     background: linear-gradient(to right, var(--white-20), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
 .feature-card:hover .card-line {
-    opacity: 1;
+    opacity: 1; /* la ligne apparaît au hover */
 }
 
-/* ============ FINAL CTA ============ */
 .final-cta {
     padding: 140px var(--container-padding);
     border-top: 1px solid var(--white-05);
@@ -472,7 +473,6 @@
     font-weight: 300;
 }
 
-/* ============ FOOTER ============ */
 .site-footer {
     border-top: 1px solid var(--white-05);
     padding: 40px var(--container-padding);
@@ -498,10 +498,9 @@
     color: var(--white-20);
 }
 
-/* ============ RESPONSIVE ============ */
 @media (max-width: 900px) {
     .story-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* une seule colonne sur mobile */
         gap: 48px;
     }
 
@@ -516,7 +515,7 @@
     }
 
     .spec-divider {
-        width: 60px;
+        width: 60px; /* devient une ligne horizontale sur mobile */
         height: 1px;
     }
 
