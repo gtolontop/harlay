@@ -13,12 +13,11 @@ body {
 }
 
 #titre h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800;
+    font-size: 50px;
+    color: red;
+    font-family: Impact, fantasy;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    background: linear-gradient(to right, #ffffff, rgba(255,255,255,0.4), #ffffff);
+    background: linear-gradient(to right, #FF0000, #FF8989, #ABABAB, #8989BB, #FF0000);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
