@@ -57,19 +57,22 @@ body{
 
 #flechebas {
   position: fixed;
-  top: 520px;
-  left: 1130px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
   height: 50px;
   width: auto;
+  z-index: 10;
 }
 
 #flechehaut {
   position: fixed;
-  top: 520px;
+  top: 50%;
   left: 20px;
+  transform: translateY(-50%) rotate(180deg);
   height: 50px;
   width: auto;
-  transform: rotate(180deg);
+  z-index: 10;
 }
 
 /* style du "total a payer"*/
