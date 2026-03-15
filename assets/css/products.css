@@ -9,6 +9,7 @@ body{
 /* style gros titre dégradé/ animaTions*/
 
 #titre {
+	scroll-margin-top: var(--nav-height);
 	font-size: 50px;
 	text-align: center;
 	color: red;
