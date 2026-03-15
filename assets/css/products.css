@@ -8,12 +8,9 @@ body {
 /* ============ TITRE ============ */
 #titre {
     scroll-margin-top: var(--nav-height);
+    font-size: 50px;
     padding: 60px 20px 40px;
     text-align: center;
-}
-
-#titre h1 {
-    font-size: 50px;
     color: red;
     font-family: Impact, fantasy;
     text-transform: uppercase;
