@@ -1,5 +1,7 @@
 class AppNavbar extends HTMLElement {
     connectedCallback() {
+
+        // injecter le html de la navbar
         this.innerHTML = `
             <nav class="navbar">
                 <div class="navbar-content">
@@ -26,13 +28,8 @@ class AppNavbar extends HTMLElement {
 
         const navbar = this.querySelector('.navbar');
 
-        const handleScroll = () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        };
+        // ajouter / enlever la classe scrolled selon la position
+        const handleScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 20);
 
         window.addEventListener('scroll', handleScroll);
         handleScroll();
