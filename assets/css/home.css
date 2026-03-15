@@ -14,7 +14,7 @@
     transform: translateY(40px);
     /* transition fluide : cubic-bezier = courbe d'accélération custom (démarre vite, finit doucement) */
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     /* délai variable : chaque élément peut avoir son propre --delay défini en HTML */
     transition-delay: var(--delay, 0s);
 }
@@ -86,7 +86,8 @@
 }
 
 .hero-sub {
-    font-size: clamp(16px, 1.4vw, 22px); /* taille fluide entre 16px et 22px */
+    font-size: clamp(16px, 1.4vw, 22px);
+    /* taille fluide entre 16px et 22px */
     font-weight: 300;
     color: var(--white-40);
     letter-spacing: 0.5px;
@@ -116,7 +117,7 @@
     cursor: pointer;
     /* deux propriétés animées en même temps avec des courbes différentes */
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                opacity 0.25s ease;
+        opacity 0.25s ease;
 }
 
 .cta-main:hover {
@@ -177,9 +178,18 @@
 }
 
 @keyframes scrollPulse {
+
     /* la ligne pulse en opacité et en hauteur */
-    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-    50% { opacity: 1; transform: scaleY(1); }
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
 
 .marquee-section {
@@ -201,7 +211,8 @@
     align-items: center;
     gap: 48px;
     padding-right: 48px;
-    flex-shrink: 0; /* empêche le contenu de rétrécir */
+    flex-shrink: 0;
+    /* empêche le contenu de rétrécir */
     animation: marqueeScroll 15s linear infinite;
 }
 
@@ -211,7 +222,8 @@
     letter-spacing: 6px;
     text-transform: uppercase;
     color: var(--white-20);
-    white-space: nowrap; /* empêche le texte de passer à la ligne */
+    white-space: nowrap;
+    /* empêche le texte de passer à la ligne */
 }
 
 .marquee-dot {
@@ -224,9 +236,14 @@
 }
 
 @keyframes marqueeScroll {
-    0% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
     /* décale d'exactement une répétition pour que ça boucle sans saut */
-    100% { transform: translateX(calc(-100% - 48px)); }
+    100% {
+        transform: translateX(calc(-100% - 48px));
+    }
 }
 
 .story {
@@ -237,7 +254,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* deux colonnes égales */
+    grid-template-columns: 1fr 1fr;
+    /* deux colonnes égales */
     gap: 80px;
     align-items: center;
 }
@@ -286,10 +304,12 @@
     /* pseudo-élément pour ajouter une bordure par dessus l'image */
     content: '';
     position: absolute;
-    inset: 0; /* équivalent à top/right/bottom/left: 0 */
+    inset: 0;
+    /* équivalent à top/right/bottom/left: 0 */
     border-radius: 20px;
     border: 1px solid var(--white-10);
-    pointer-events: none; /* invisible aux clics */
+    pointer-events: none;
+    /* invisible aux clics */
 }
 
 .story-img-wrapper img {
@@ -301,7 +321,8 @@
 }
 
 .story-img-wrapper:hover img {
-    transform: scale(1.03); /* léger zoom au hover */
+    transform: scale(1.03);
+    /* léger zoom au hover */
 }
 
 .specs {
@@ -319,7 +340,8 @@
 }
 
 .spec-item {
-    flex: 1; /* chaque item prend la même largeur */
+    flex: 1;
+    /* chaque item prend la même largeur */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,7 +410,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes égales */
     gap: 24px;
 }
 
@@ -404,13 +427,15 @@
 
 .feature-card:hover {
     border-color: var(--white-10);
-    transform: translateY(-4px); /* légère élévation au hover */
+    transform: translateY(-4px);
+    /* légère élévation au hover */
 }
 
 .card-number {
     font-size: 64px;
     font-weight: 900;
-    color: var(--white-05); /* quasi invisible, juste décoratif */
+    color: var(--white-05);
+    /* quasi invisible, juste décoratif */
     line-height: 1;
     margin-bottom: 24px;
 }
@@ -442,7 +467,8 @@
 }
 
 .feature-card:hover .card-line {
-    opacity: 1; /* la ligne apparaît au hover */
+    opacity: 1;
+    /* la ligne apparaît au hover */
 }
 
 .final-cta {
@@ -500,7 +526,8 @@
 
 @media (max-width: 900px) {
     .story-inner {
-        grid-template-columns: 1fr; /* une seule colonne sur mobile */
+        grid-template-columns: 1fr;
+        /* une seule colonne sur mobile */
         gap: 48px;
     }
 
@@ -515,7 +542,7 @@
     }
 
     .spec-divider {
-        width: 60px; /* devient une ligne horizontale sur mobile */
+        width: 60px;
         height: 1px;
     }
 

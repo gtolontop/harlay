@@ -75,7 +75,7 @@ function payer() {
     if (total > 0) {
 
         // 10% de chance de tomber sur la variante spéciale
-        if (Math.random() < 0.90) {
+        if (Math.random() < 0.30) {
             alert("🎰 JACKPOT... non en fait non");
             alert("On a failli accepter. On a ri. On a refusé.");
             alert("Votre banque a appelé. Elle pleure.");
