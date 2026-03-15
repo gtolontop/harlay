@@ -46,17 +46,13 @@ body {
     align-items: center;
     text-align: center;
     gap: 16px;
-    padding: 40px 32px;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 20px;
-    background: #1f1f1f;
 }
 
 .produit img {
-    height: 260px;
-    width: auto;
-    border-radius: 12px;
+    width: 400px;
+    height: 280px;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .produit-nom {
@@ -235,12 +231,9 @@ body {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 600px) {
-    .produit {
-        padding: 28px 20px;
-    }
-
     .produit img {
-        height: 200px;
+        width: 100%;
+        height: 220px;
     }
 
     .checkout-actions {
