@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,63 @@
 
 <body>
     <app-navbar></app-navbar>
-    <section class="hero">
-        <div>
 
+    <div id="titre">
+        <h1>Vente Harley</h1>
+    </div>
+
+    <a href="#tap"><img id="flechebas" src="assets/images/flechebas-removebg-preview.png" alt="Aller en bas"></a>
+    <a href="#titre"><img id="flechehaut" src="assets/images/flechebas-removebg-preview.png" alt="Aller en haut"></a>
+
+    <div class="produits">
+        <div class="produit">
+            <img src="assets/images/roadking.jpg" alt="Road King">
+            <p>Harley-Davidson Road King - 21000&euro;</p>
+            <button onclick="addRoad(-1)" id="removeroad" class="retirer">retirer du panier</button>
+            <button onclick="addRoad(1)" id="buyroad" class="ajouter">ajouter au panier</button>
+            <p>Quantit&eacute; = <span id='qroad'>0</span></p>
         </div>
-    </section>
+
+        <div class="produit">
+            <img src="assets/images/streetbob.webp" alt="Street Bob">
+            <p>Harley-Davidson Street Bob - 15000&euro;</p>
+            <button onclick="addStreet(-1)" id="removestreet" class="retirer">retirer du panier</button>
+            <button onclick="addStreet(1)" id="buystreet" class="ajouter">ajouter au panier</button>
+            <p>Quantit&eacute; = <span id='qstreet'>0</span></p>
+        </div>
+
+        <div class="produit">
+            <img src="assets/images/iron883.webp" alt="Iron 883">
+            <p>Harley-Davidson Iron 883 - 12000&euro;</p>
+            <button onclick="addIron(-1)" id="removeiron" class="retirer">retirer du panier</button>
+            <button onclick="addIron(1)" id="buyiron" class="ajouter">ajouter au panier</button>
+            <p>Quantit&eacute; = <span id='qiron'>0</span></p>
+        </div>
+
+        <div class="produit">
+            <img src="assets/images/troll.jpg" alt="Original Collector Shiny">
+            <p style="text-align: center">Harley-Davidson Original Collector Shiny PRO max+<br>200Mt/min Sign&eacute;e par Arthur Davidson et Johnny Hallyday<br>- 99999&euro;</p>
+            <button onclick="addTroll(-1)" id="removetroll" class="retirer">retirer du panier</button>
+            <button onclick="addTroll(1)" id="buytroll" class="ajouter">ajouter au panier</button>
+            <p>Quantit&eacute; = <span id='qtroll'>0</span></p>
+        </div>
+    </div>
+
+    <p id="espace">.</p>
+
+    <p id="tap">Le total &agrave; payer est de <span id='total'>0</span> euros.</p>
+
+    <div class="conteneur">
+        <button onclick="payer()" id="paye">payer la commande</button>
+    </div>
+
+    <div class="conteneur">
+        <button onclick="annuler()" id="annul">annuler la commande</button>
+    </div>
+
+    <p id="sign"><em>sign&eacute; Milo</em></p>
+
+    <script src="assets/js/products.js"></script>
     <script src="assets/js/navbar.js" defer></script>
 </body>
 

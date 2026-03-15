@@ -1,0 +1,149 @@
+/* init lebody*/
+body{
+	margin:0;
+	padding: 0;
+	background: linear-gradient(to bottom,#0653BD, #000000 , #A6A6A6,#FF0000, #FFEEEE);
+}
+		
+
+/* style gros titre dégradé/ animaTions*/
+
+#titre {
+	font-size: 50px;
+	text-align: center;
+	color: red;
+	font-family: Impact, fantasy;
+	text-transform: uppercase;
+	background: linear-gradient(to right, #FF0000, #FF8989,  #ABABAB , #8989BB, #FF0000);
+	background-size: 200%;
+	background-clip:text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animate-gradient 10s linear infinite;
+	}
+	
+	/* animation du dégradé*/
+@keyframes animate-gradient {
+	to {
+		background-position:200%;
+		}
+	}
+	
+	/* stylisation des produits*/
+.produits img{
+	
+	height: 300px;
+	width: auto;
+	}
+	
+.produits {
+	align-items: center;  
+	display: flex;
+	gap: 150px;
+	flex-direction:column;
+	
+}
+
+
+.produits p {
+	margin: 0;
+	padding: 5px;
+	color: #FFAAAA;
+	font-family: Impact, fantasy;
+	text-transform: uppercase;
+}
+
+/* Fleche pour aller en bas et en haut de la page*/
+
+#flechebas {
+  position: fixed;
+  top: 520px;
+  left: 1130px;
+  height: 50px;
+  width: auto;
+}
+
+#flechehaut {
+  position: fixed;
+  top: 520px;
+  left: 20px;
+  height: 50px;
+  width: auto;
+  transform: rotate(180deg);
+}
+
+/* style du "total a payer"*/
+
+#tap{
+	text-align: center;
+	font-family: "Andale Mono, monospace";
+	font-weight: bold;
+	font-size: 30px;
+}
+
+/* payer et annuler style*/
+#annul{
+
+	padding: 5px;
+	width: 200px;
+	height: auto;
+	border: 7px solid rgb(220 20 20);
+	color :#751243;
+	border-radius: 10px;
+}
+
+#paye{
+	font-family: "Andale Mono, monospace";
+	font-size: 30px;
+	padding: 5px;
+	width: 300px;
+	height: 60px;
+	border: 7px solid rgb(20 220 20);
+	color :#00BB20;
+	border-radius: 10px;
+}
+/* pour centrer le bouton paye*/
+
+.conteneur {
+	font: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	
+}
+/* style des bouton ajouter et retirer*/
+
+.ajouter{
+	font-family: "Andale Mono, monospace";
+	font-size: 20px;
+	padding: 5px;
+	width: 180px;
+	height: 50px;
+	border: 7px solid rgb(20 220 180);
+	color :#00BBFF;
+	border-radius: 20px;
+}
+
+.retirer{
+	font-family: "Andale Mono, monospace";
+	font-size: 20px;
+	padding: 5px;
+	width: 180px;
+	height: 50px;
+	border: 7px solid rgb(220 180 20);
+	color :#FF5500;
+	border-radius: 20px;
+}
+
+/* ma signature*/
+#sign {
+	text-align: center;
+	padding: 20px;
+}
+
+/* espace pour des raisons esthétiques */
+#espace{
+	color:red;
+	padding: 150px;
+}
