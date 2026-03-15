@@ -2,9 +2,9 @@
 body{
 	margin:0;
 	padding: 0;
-	background: linear-gradient(to bottom,#0653BD, #000000 , #A6A6A6,#FF0000, #FFEEEE);
+	background: #1a1a1a;
 }
-		
+
 
 /* style gros titre dégradé/ animaTions*/
 
@@ -12,44 +12,44 @@ body{
 	scroll-margin-top: var(--nav-height);
 	font-size: 50px;
 	text-align: center;
-	color: red;
+	color: #ffffff;
 	font-family: Impact, fantasy;
 	text-transform: uppercase;
-	background: linear-gradient(to right, #FF0000, #FF8989,  #ABABAB , #8989BB, #FF0000);
+	background: linear-gradient(to right, #ffffff, rgba(255,255,255,0.4), #ffffff);
 	background-size: 200%;
 	background-clip:text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: animate-gradient 10s linear infinite;
 	}
-	
+
 	/* animation du dégradé*/
 @keyframes animate-gradient {
 	to {
 		background-position:200%;
 		}
 	}
-	
+
 	/* stylisation des produits*/
 .produits img{
-	
+
 	height: 300px;
 	width: auto;
 	}
-	
+
 .produits {
-	align-items: center;  
+	align-items: center;
 	display: flex;
 	gap: 150px;
 	flex-direction:column;
-	
+
 }
 
 
 .produits p {
 	margin: 0;
 	padding: 5px;
-	color: #FFAAAA;
+	color: rgba(255,255,255,0.5);
 	font-family: Impact, fantasy;
 	text-transform: uppercase;
 }
@@ -83,6 +83,7 @@ body{
 	font-family: "Andale Mono, monospace";
 	font-weight: bold;
 	font-size: 30px;
+	color: #ffffff;
 }
 
 /* payer et annuler style*/
@@ -91,9 +92,16 @@ body{
 	padding: 5px;
 	width: 200px;
 	height: auto;
-	border: 7px solid rgb(220 20 20);
-	color :#751243;
+	border: 1px solid rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.5);
+	background: transparent;
 	border-radius: 10px;
+	cursor: pointer;
+}
+
+#annul:hover {
+	border-color: rgba(255,255,255,0.4);
+	color: #ffffff;
 }
 
 #paye{
@@ -102,19 +110,25 @@ body{
 	padding: 5px;
 	width: 300px;
 	height: 60px;
-	border: 7px solid rgb(20 220 20);
-	color :#00BB20;
+	border: none;
+	background: #ffffff;
+	color: #000000;
 	border-radius: 10px;
+	cursor: pointer;
 }
+
+#paye:hover {
+	opacity: 0.9;
+}
+
 /* pour centrer le bouton paye*/
 
 .conteneur {
-	font: sans-serif;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	
+
 }
 /* style des bouton ajouter et retirer*/
 
@@ -124,9 +138,15 @@ body{
 	padding: 5px;
 	width: 180px;
 	height: 50px;
-	border: 7px solid rgb(20 220 180);
-	color :#00BBFF;
+	border: 1px solid rgba(255,255,255,0.2);
+	color: #ffffff;
+	background: transparent;
 	border-radius: 20px;
+	cursor: pointer;
+}
+
+.ajouter:hover {
+	border-color: rgba(255,255,255,0.4);
 }
 
 .retirer{
@@ -135,19 +155,27 @@ body{
 	padding: 5px;
 	width: 180px;
 	height: 50px;
-	border: 7px solid rgb(220 180 20);
-	color :#FF5500;
+	border: 1px solid rgba(255,255,255,0.1);
+	color: rgba(255,255,255,0.4);
+	background: transparent;
 	border-radius: 20px;
+	cursor: pointer;
+}
+
+.retirer:hover {
+	border-color: rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.7);
 }
 
 /* ma signature*/
 #sign {
 	text-align: center;
 	padding: 20px;
+	color: rgba(255,255,255,0.2);
 }
 
 /* espace pour des raisons esthétiques */
 #espace{
-	color:red;
+	color: transparent;
 	padding: 150px;
 }
