@@ -8,115 +8,151 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Moto Harley</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Harley — B600</title>
 </head>
 
 <body>
     <app-navbar></app-navbar>
 
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg" id="heroBg"></div>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
-            <p class="hero-label">Nouveau modèle 2025</p>
-            <h1 class="hero-title">B600</h1>
-            <p class="hero-subtitle">Unique en son genre, vous n'en trouverez nulle part ailleurs.</p>
-            <div class="hero-actions">
-                <a href="products.html" class="btn-primary">Découvrir</a>
-                <a href="#specs" class="btn-secondary">En savoir plus</a>
+            <div class="hero-tag reveal">
+                <span class="tag-line"></span>
+                <span>Série limitée 2025</span>
+                <span class="tag-line"></span>
+            </div>
+            <h1 class="hero-title reveal">
+                <span class="title-line">B<span class="title-accent">6</span>00</span>
+            </h1>
+            <p class="hero-sub reveal">La route n'attend pas. Vous non plus.</p>
+            <div class="hero-cta reveal">
+                <a href="products.html" class="cta-main">
+                    <span>Commander</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#story" class="cta-ghost">Découvrir</a>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="assets/images/harleymoto.webp" alt="Harley B600">
+        <div class="scroll-indicator" id="scrollInd">
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <section class="specs" id="specs">
-        <div class="specs-grid">
-            <div class="spec-card">
-                <span class="spec-value">300</span>
+    <!-- MARQUEE -->
+    <section class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>PUISSANCE</span><span class="marquee-dot"></span>
+                <span>VITESSE</span><span class="marquee-dot"></span>
+                <span>LIBERTÉ</span><span class="marquee-dot"></span>
+                <span>LÉGENDE</span><span class="marquee-dot"></span>
+                <span>PUISSANCE</span><span class="marquee-dot"></span>
+                <span>VITESSE</span><span class="marquee-dot"></span>
+                <span>LIBERTÉ</span><span class="marquee-dot"></span>
+                <span>LÉGENDE</span><span class="marquee-dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+        <div class="story-inner">
+            <div class="story-text">
+                <p class="story-label reveal">L'histoire</p>
+                <h2 class="story-title reveal">Née pour<br>dominer.</h2>
+                <p class="story-desc reveal">Lancée cette année en édition blanche exclusive, la B600 repousse chaque limite connue. <strong>2 000 unités vendues</strong> le jour de sa sortie — un record absolu dans l'industrie moto.</p>
+                <p class="story-desc reveal">Fabriquée à 99% en composite ultra-léger, elle atteint <strong>300 km/h</strong> — chronométrée sur le circuit international de Lusail, Qatar.</p>
+            </div>
+            <div class="story-visual reveal">
+                <div class="story-img-wrapper">
+                    <img src="assets/images/harleymoto.webp" alt="Harley B600">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECS -->
+    <section class="specs">
+        <div class="specs-inner">
+            <div class="spec-item reveal">
+                <span class="spec-number" data-target="300">0</span>
                 <span class="spec-unit">km/h</span>
-                <span class="spec-label">Vitesse max</span>
+                <span class="spec-name">Vitesse maximale</span>
             </div>
-            <div class="spec-card">
-                <span class="spec-value">2000</span>
+            <div class="spec-divider"></div>
+            <div class="spec-item reveal">
+                <span class="spec-number" data-target="2000">0</span>
                 <span class="spec-unit">unités</span>
-                <span class="spec-label">Vendues au lancement</span>
+                <span class="spec-name">Vendues jour 1</span>
             </div>
-            <div class="spec-card">
-                <span class="spec-value">99%</span>
-                <span class="spec-unit">plastique</span>
-                <span class="spec-label">Ultra-léger</span>
+            <div class="spec-divider"></div>
+            <div class="spec-item reveal">
+                <span class="spec-number" data-target="99">0</span>
+                <span class="spec-unit">%</span>
+                <span class="spec-name">Composite léger</span>
             </div>
         </div>
     </section>
 
+    <!-- FEATURES -->
     <section class="features">
-        <div class="features-content">
-            <h2 class="section-title">Technologies embarquées</h2>
-            <p class="section-subtitle">Des fonctionnalités futuristes qui repoussent les limites.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </div>
-                    <h3>Système solaire</h3>
-                    <p>Rechargement autonome grâce à des panneaux intégrés.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                            <rect x="9" y="9" width="6" height="6"></rect>
-                            <line x1="9" y1="1" x2="9" y2="4"></line>
-                            <line x1="15" y1="1" x2="15" y2="4"></line>
-                            <line x1="9" y1="20" x2="9" y2="23"></line>
-                            <line x1="15" y1="20" x2="15" y2="23"></line>
-                            <line x1="20" y1="9" x2="23" y2="9"></line>
-                            <line x1="20" y1="14" x2="23" y2="14"></line>
-                            <line x1="1" y1="9" x2="4" y2="9"></line>
-                            <line x1="1" y1="14" x2="4" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3>Conduite autonome</h3>
-                    <p>Intelligence artificielle avancée pour une conduite assistée.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h3>Roues pare-balles</h3>
-                    <p>Protection maximale avec des matériaux de pointe.</p>
-                </div>
+        <div class="features-header">
+            <p class="features-label reveal">Technologies</p>
+            <h2 class="features-title reveal">Le futur,<br>maintenant.</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal" style="--delay: 0s">
+                <div class="card-number">01</div>
+                <h3>Système solaire</h3>
+                <p>Panneaux photovoltaïques intégrés au carénage. Rechargement autonome en roulant.</p>
+                <div class="card-line"></div>
+            </div>
+            <div class="feature-card reveal" style="--delay: 0.1s">
+                <div class="card-number">02</div>
+                <h3>Conduite autonome</h3>
+                <p>IA embarquée de niveau 4. Capteurs LiDAR 360° et anticipation prédictive.</p>
+                <div class="card-line"></div>
+            </div>
+            <div class="feature-card reveal" style="--delay: 0.2s">
+                <div class="card-number">03</div>
+                <h3>Roues pare-balles</h3>
+                <p>Alliage composite militaire. Résistance aux impacts certifiée STANAG.</p>
+                <div class="card-line"></div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="cta-content">
-            <h2>Obtenez le vôtre avant qu'il ne soit trop tard</h2>
-            <div class="cta-stock">
-                <div class="stock-bar">
-                    <div class="stock-fill"></div>
-                </div>
-                <span class="stock-text">50% des stocks restants</span>
+    <!-- CTA -->
+    <section class="final-cta">
+        <div class="final-cta-inner reveal">
+            <p class="final-label">Stock limité</p>
+            <h2>Il en reste <span class="accent">50%</span></h2>
+            <div class="final-bar">
+                <div class="final-bar-fill"></div>
             </div>
-            <a href="products.html" class="btn-primary btn-large">Commander maintenant</a>
+            <a href="products.html" class="cta-main cta-large">
+                <span>Obtenir la mienne</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-logo">HARLEY</span>
+            <span class="footer-copy">&copy; 2025 Harley-Davidson. Tous droits réservés.</span>
+        </div>
+    </footer>
 
     <script src="assets/js/navbar.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
 </body>
 
 </html>
