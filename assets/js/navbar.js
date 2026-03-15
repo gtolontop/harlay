@@ -8,7 +8,7 @@ class AppNavbar extends HTMLElement {
                         <ul class="navbar-links">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="products.html">Products</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
                         </ul>
                         <a href="#" class="navbar-btn">
                             <span>Buy Now</span>
