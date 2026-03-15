@@ -3,13 +3,12 @@
    ============================================ */
 
 :root {
-    --accent: #e86a2a;
-    --accent-glow: rgba(232, 106, 42, 0.25);
     --white: #ffffff;
-    --white-60: rgba(255, 255, 255, 0.6);
-    --white-30: rgba(255, 255, 255, 0.3);
+    --white-70: rgba(255, 255, 255, 0.7);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-20: rgba(255, 255, 255, 0.2);
     --white-10: rgba(255, 255, 255, 0.1);
-    --white-05: rgba(255, 255, 255, 0.05);
+    --white-05: rgba(255, 255, 255, 0.04);
     --dark: #0a0a0a;
     --dark-card: #111111;
 }
@@ -48,8 +47,7 @@
 .hero-bg {
     position: absolute;
     inset: -20%;
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, var(--accent-glow), transparent 70%),
-                radial-gradient(ellipse 50% 40% at 70% 60%, rgba(232, 106, 42, 0.08), transparent 60%);
+    background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(255, 255, 255, 0.03), transparent 70%);
     will-change: transform;
 }
 
@@ -57,9 +55,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-        rgba(10, 10, 10, 0.3) 0%,
-        rgba(10, 10, 10, 0.1) 40%,
-        rgba(10, 10, 10, 0.6) 80%,
+        rgba(10, 10, 10, 0.2) 0%,
+        rgba(10, 10, 10, 0.05) 40%,
+        rgba(10, 10, 10, 0.5) 80%,
         var(--dark) 100%
     );
 }
@@ -83,15 +81,14 @@
     font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--white-40);
 }
 
 .tag-line {
     display: block;
     width: 40px;
     height: 1px;
-    background: var(--accent);
-    opacity: 0.5;
+    background: var(--white-20);
 }
 
 .hero-title {
@@ -107,14 +104,13 @@
 }
 
 .title-accent {
-    color: var(--accent);
-    position: relative;
+    color: var(--white-40);
 }
 
 .hero-sub {
     font-size: clamp(16px, 1.4vw, 22px);
     font-weight: 300;
-    color: var(--white-60);
+    color: var(--white-40);
     letter-spacing: 0.5px;
     max-width: 400px;
 }
@@ -135,22 +131,23 @@
     font-size: 15px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-    color: var(--white);
-    background: var(--accent);
+    color: #000000;
+    background: var(--white);
     border: none;
     border-radius: 60px;
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 0.25s ease;
+                opacity 0.25s ease;
 }
 
 .cta-main:hover {
     transform: scale(1.04);
-    box-shadow: 0 8px 40px var(--accent-glow);
+    opacity: 0.9;
 }
 
 .cta-main svg {
+    stroke: #000000;
     transition: transform 0.25s ease;
 }
 
@@ -165,7 +162,7 @@
     font-size: 15px;
     font-weight: 500;
     font-family: 'Inter', sans-serif;
-    color: var(--white-60);
+    color: var(--white-70);
     background: transparent;
     border: 1px solid var(--white-10);
     border-radius: 60px;
@@ -174,7 +171,7 @@
 }
 
 .cta-ghost:hover {
-    border-color: var(--white-30);
+    border-color: var(--white-20);
     color: var(--white);
 }
 
@@ -195,7 +192,7 @@
 .scroll-line {
     width: 1px;
     height: 60px;
-    background: linear-gradient(to bottom, var(--accent), transparent);
+    background: linear-gradient(to bottom, var(--white-40), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -230,17 +227,16 @@
     font-weight: 700;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: var(--white-30);
+    color: var(--white-20);
     white-space: nowrap;
 }
 
 .marquee-dot {
     display: block;
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
+    width: 4px;
+    height: 4px;
+    background: var(--white-20);
     border-radius: 50%;
-    opacity: 0.6;
 }
 
 @keyframes marqueeScroll {
@@ -273,7 +269,7 @@
     font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--white-40);
 }
 
 .story-title {
@@ -288,11 +284,11 @@
     font-size: clamp(15px, 1.1vw, 17px);
     font-weight: 400;
     line-height: 1.8;
-    color: var(--white-60);
+    color: var(--white-40);
 }
 
 .story-desc strong {
-    color: var(--white);
+    color: var(--white-70);
     font-weight: 600;
 }
 
@@ -336,7 +332,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
 }
 
 .spec-item {
@@ -360,7 +355,7 @@
 .spec-unit {
     font-size: 14px;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--white-40);
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -368,7 +363,7 @@
 .spec-name {
     font-size: 13px;
     font-weight: 400;
-    color: var(--white-30);
+    color: var(--white-20);
     margin-top: 8px;
 }
 
@@ -393,7 +388,7 @@
     font-weight: 500;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--white-40);
     margin-bottom: 16px;
 }
 
@@ -424,7 +419,7 @@
 }
 
 .feature-card:hover {
-    border-color: rgba(232, 106, 42, 0.2);
+    border-color: var(--white-10);
     transform: translateY(-4px);
 }
 
@@ -447,7 +442,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.7;
-    color: var(--white-30);
+    color: var(--white-20);
 }
 
 .card-line {
@@ -455,8 +450,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent), transparent);
+    height: 1px;
+    background: linear-gradient(to right, var(--white-20), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -468,6 +463,7 @@
 /* ============ FINAL CTA ============ */
 .final-cta {
     padding: 140px var(--container-padding);
+    border-top: 1px solid var(--white-05);
 }
 
 .final-cta-inner {
@@ -480,14 +476,6 @@
     gap: 28px;
 }
 
-.final-label {
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--accent);
-}
-
 .final-cta-inner h2 {
     font-size: clamp(28px, 3vw, 40px);
     font-weight: 700;
@@ -495,25 +483,10 @@
     line-height: 1.2;
 }
 
-.accent {
-    color: var(--accent);
-}
-
-.final-bar {
-    width: 100%;
-    max-width: 300px;
-    height: 3px;
-    background: var(--white-10);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.final-bar-fill {
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, var(--accent), #f0944a);
-    border-radius: 4px;
-    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+.final-cta-inner h2 em {
+    font-style: normal;
+    color: var(--white-40);
+    font-weight: 300;
 }
 
 /* ============ FOOTER ============ */
@@ -534,12 +507,12 @@
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 2px;
-    color: var(--white-30);
+    color: var(--white-20);
 }
 
 .footer-copy {
     font-size: 12px;
-    color: var(--white-30);
+    color: var(--white-20);
 }
 
 /* ============ RESPONSIVE ============ */
