@@ -74,8 +74,10 @@ function payer() {
 
     if (total > 0) {
 
-        // 10% de chance de tomber sur la variante spéciale
-        if (Math.random() < 0.30) {
+        const roll = Math.random(); // un seul tirage pour les deux variantes
+
+        // variante 1 — 10% de chance
+        if (roll < 0.10) {
             alert("🎰 JACKPOT... non en fait non");
             alert("On a failli accepter. On a ri. On a refusé.");
             alert("Votre banque a appelé. Elle pleure.");
@@ -86,6 +88,21 @@ function payer() {
             alert("Vous avez le droit à un sticker de consolation 🥲");
             alert("Le sticker c'était un mensonge aussi.");
             alert("❌ Paiement refusé. Comme votre dignité.");
+
+        // variante 2 — 10% de chance
+        } else if (roll < 0.20) {
+            alert("⏳ Traitement du paiement en cours...");
+            alert("⏳ Toujours en cours...");
+            alert("⏳ Presque...");
+            alert("✅ Paiement ACCEPTÉ !!!");
+            alert("HAHA non c'est une blague");
+            alert("Vous avez vraiment cru hein 😭");
+            alert("On a vu votre tête depuis le serveur. Magnifique.");
+            alert("Votre carte a été découpée automatiquement par précaution.");
+            alert("Harley vous envoie une pensée. Pas la moto, juste une pensée.");
+            alert("❌ Refusé. Rentrez chez vous.");
+
+        // refus classique — 80% du temps
         } else {
             alert("❌ Paiement refusé");
             alert("Vous êtes à découvert 💸");
