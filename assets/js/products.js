@@ -87,9 +87,9 @@ function payer() {
             alert("Un pigeon dehors vous a vu faire ça. Il est déçu.");
             alert("Vous avez le droit à un sticker de consolation 🥲");
             alert("Le sticker c'était un mensonge aussi.");
-            alert("❌ Paiement refusé. Comme votre dignité.");
+            alert("❌ Paiement refusé. rip");
 
-        // variante 2 — 10% de chance
+            // variante 2 — 10% de chance
         } else if (roll < 0.20) {
             alert("⏳ Traitement du paiement en cours...");
             alert("⏳ Toujours en cours...");
@@ -102,7 +102,7 @@ function payer() {
             alert("Harley vous envoie une pensée. Pas la moto, juste une pensée.");
             alert("❌ Refusé. Rentrez chez vous.");
 
-        // refus classique — 80% du temps
+            // refus classique — 80% du temps
         } else {
             alert("❌ Paiement refusé");
             alert("Vous êtes à découvert 💸");
